@@ -10,7 +10,7 @@ class Gifs(commands.Cog):
         if message.author == self.bot.user:
             return
 
-        if ".gif" in message.content and "http" in message.content:
+        if "gif" or ".gif" in message.content and "http" in message.content:
             if gd.check_gifs(message.content):
                 await message.delete()
 

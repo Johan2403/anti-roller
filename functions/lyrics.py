@@ -10,6 +10,7 @@ class Lyrics(commands.Cog):
         if message.author == self.bot.user:
             return
 
-        if ld.check_lyrics(message.content):
-            await message.delete()
+        if "gif" not in message.content:
+            if ld.check_lyrics(message.content):
+                await message.delete()
         
